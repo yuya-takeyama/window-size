@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+  <title>Window Size</title>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function () {
+      var $window_size = $('#window_size');
+
+      var renderWindowSize = function () {
+        var text = 'width:' + window.innerWidth + ', height: ' + window.innerHeight;
+        $window_size.text(text);
+      };
+
+      $(window).bind('resize', function () {
+        renderWindowSize();
+      });
+
+      renderWindowSize();
+    });
+  </script>
+</head>
+<body>
+  <div id="window_size">hoge</div>
+</body>
+</html>
